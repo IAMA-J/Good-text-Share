@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/lyh.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="js/lottery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="box" class="box">
+			<div class="outer">
+			</div>
+			<div class="inner" id="routedBtn">
+				<img src="img/img_click_sel.png" alt="" />
+			</div>
+
+		</div>
+	</body>
+	<script type="text/javascript">
+	window.onload=function(){
+		var arrayDate=[{
+				t: 1,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 2,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 3,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 4,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 5,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 6,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 7,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 8,
+				i: 'img/img_5jifen.png'
+			}];
+		var obj=new KinerLottery({
+			el:'#box',//大转盘整体的选择
+			rotateNum:5,
+			roteTime:3,//单位为秒数
+			arrayData:arrayDate,
+			clickBtn:function(){
+				
+				//获取获奖的数据
+				var reward=-90;
+				//获取数据后转盘转动
+				this.goKinerLottery(reward);
+				
+				
+			},
+			callback:function(){
+				alert(111)
+				
+			}
+		});
+		
+	}
+		
+		
+	</script>
+</html>

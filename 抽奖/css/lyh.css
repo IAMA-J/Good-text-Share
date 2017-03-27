@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+html {
+    font-size : 20px;
+}
+/*@media only screen and (min-width: 401px){
+    html {
+        font-size: 25px !important;
+    }
+}
+@media only screen and (min-width: 428px){
+    html {
+        font-size: 26.75px !important;
+    }
+}
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 30px !important;
+    }
+}
+@media only screen and (min-width: 569px){
+    html {
+        font-size: 35px !important;
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 40px !important;
+    }
+}
+*/
+@media screen and ( min-width: 212px){
+	  html {
+        font-size: 16px !important;
+    }
+	/*213px显示屏样式 LG Optimus One*/}
+@media screen and ( min-width: 319px){
+	 html {
+        font-size: 18px !important;
+    }
+	/*320px显示屏样式 苹果4/4S/5C/5S黑莓Z30 */}
+@media screen and ( min-width: 359px){
+	 html {
+        font-size: 20px !important;
+    }
+	/*360px显示屏样式 索尼Z1*/}
+@media screen and ( min-width: 383px){
+	 html {
+        font-size: 22px !important;
+    }
+	/*384px显示屏样式 黑莓Z10 谷歌 Nexus 6 LG Optimus G*/}
+@media screen and ( min-width: 399px){
+	 html {
+        font-size: 24px !important;
+    }
+	/*399px显示屏样式 三星galaxyNote*/}
+@media screen and ( min-width: 414px){
+	 html {
+        font-size: 26px !important;
+    }
+	/*414px显示屏样式 苹果6plus*/}
+@media screen and ( min-width: 423px){
+	 html {
+        font-size: 28px !important;
+    }
+	/*424px显示屏样式 LG 4X */}
+@media screen and ( min-width: 479px){
+	 html {
+        font-size: 30px !important;
+    }
+	/*480px显示屏样式 索尼MT27i Xperia sola*/}
+@media screen and ( min-width: 539px){
+	 html {
+        font-size: 32px !important;
+    }
+	/*640px显示屏样式 摩托罗拉Droid3/4/Razr Atrix 4g*/}
+@media screen and ( min-width: 639px){
+	 html {
+        font-size: 40px !important;
+    }
+	/*640px显示屏样式*/}
+@media screen and ( min-width: 640px){
+	 html {
+        font-size: 40px !important;
+    }
+	/*640px以上显示屏样式*/}
+
+
+
+
+
+
+
+
+
+
+
+
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+body{
+	background: url(../img/bg.png) center no-repeat;
+	background-size: cover;
+}
+p,li,b,span,div,strong,h1,h2,h3,h4,h5,h6,a,ul{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.box{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	
+}
+.outer{
+	width: 100%;
+	height: 60%;
+	box-sizing: border-box;
+	background: url(../img/img_zhuanpan.png) no-repeat center;
+	background-size: contain;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	 transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+	overflow: hidden;
+}
+
+.inner{
+	width: 7rem;
+    height: 7rem;
+	position: absolute;
+	margin: auto;
+	top: -1rem;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.inner img{
+	width: 100%;
+}
+.rotate{
+	width: 3rem;
+	height:90%;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+}

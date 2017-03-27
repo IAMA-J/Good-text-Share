@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>抽奖</title>
+		<link rel="stylesheet" type="text/css" href="css/lyh.css" />
+		<script src="js/jquery-1.12.3.min.js"></script>
+		<!--<script src="js/zepto.min.js"></script>-->
+		<script src="js/lottery.js"></script>
+	</head>
+
+	<body>
+		<div id="box" class="box">
+			<div class="outer">
+			</div>
+			<div class="inner" id="routedBtn">
+				<img src="img/img_click_sel.png" alt="" />
+			</div>
+
+		</div>
+
+	</body>
+	<script>
+		window.onload=function(){
+			var obj = [{
+				t: 1,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 2,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 3,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 4,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 5,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 6,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 7,
+				i: 'img/img_5jifen.png'
+			}, {
+				t: 8,
+				i: 'img/img_5jifen.png'
+			}]
+			$.each(obj, function(index, item) {
+				$('<div />').appendTo('.outer').html(item.t).addClass('rotate').css({
+
+					transform: 'rotate(' + index * 45 + 'deg)',
+					background: 'url(' + item.i + ') center 2rem no-repeat',
+					'background-size': '2rem 2rem'
+				})
+			});
+			$('body').on('click', '#routedBtn', function() {
+				console.log(11)
+				$('.outer').css({
+					'-webkit-transition': 'all 3s',
+					'transition': 'all 3s',
+					'-webkit-transform': 'rotate(' + (360) + 'deg)',
+					'transform': 'rotate(' + (360) + 'deg)'
+				});
+
+			});
+			
+			
+			
+			$('.outer').get(0).addEventListener('webkitTransitionEnd', function() {
+				
+           			alert(1111);
+           			$('.outer').css({
+					'-webkit-transition': 'none',
+					'transition': 'none',
+					'-webkit-transform': 'rotate(' + (0) + 'deg)',
+					'transform': 'rotate(' + (0) + 'deg)'
+				});
+			})
+			
+			
+		
+	}	
+	</script>
+
+</html>
